@@ -93,7 +93,8 @@ app.post('/cars', async function(req, res){
     //     res.send('car sucessfully added')
     try {
         const carDoc = await Cars.create(req.body)
-        res.send('car sucessfully added')
+        // res.send('car sucessfully added')
+        res.redirect('/cars');
         console.log(carDoc)
     } catch (error) {
         console.error(error);
