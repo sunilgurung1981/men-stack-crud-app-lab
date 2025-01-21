@@ -53,7 +53,7 @@ app.put('/cars/:carId', async function (req, res) {
 	}
 
     const updatedCar = await Cars.findByIdAndUpdate (req.params.carId, req.body) 
-    res.redirect(`/cars/ ${req.params.carId}`)
+    res.redirect('/cars/')
 })
 
 app.get('/cars', async function(req, res){
