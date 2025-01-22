@@ -1,25 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <h1>CARS: <%= carDoc.make %> <%= carDoc.model %>
-	</h1>
+  </head>
+  <body>
+    <h1>CARS: <%= carDoc.make %> <%= carDoc.model %></h1>
     <p>Year: <%= carDoc.year %></p>
     <p>Price: <%= carDoc.price %></p>
 
-	<% if (carDoc.isDrivable === true) { %>
-		<span>Ready to drive</span>
-	<% } else { %>
-		<span>Not Ready to drive</span>
-	<% } %>
+    <% if (carDoc.isDrivable === true) { %>
+    <span>Ready to drive</span>
+    <% } else { %>
+    <span>Not Ready to drive</span>
+    <% } %>
+    <br />
 
-	<form method="POST" action="/cars/<%= carDoc._id %>?_method=DELETE">
-		<button type="submit">Delete resource</button>
-	</form>
-</body>
+    <a href="/cars/<%= carDoc._id %>/edit">Edit</a>
+
+    <form method="POST" action="/cars/<%= carDoc._id %>?_method=DELETE">
+      <button type="submit">Delete resource</button>
+    </form>
+  </body>
 </html>

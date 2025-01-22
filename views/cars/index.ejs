@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>All CARS</h1>
-	<ul>
-		<% carDoc.forEach(carDoc => { %>
-		 <li>
-            <a href="/cars/<%= carDoc._id  %>"><%= carDoc.make %><%= carDoc.model %></a>
-            <a href="/cars/<%= carDoc._id %>/edit">Edit</a>
-        </li>
-		<% }) %>
-	</ul>
-</body>
+    <ul>
+      <% carDoc.forEach(carDoc => { %>
+      <li>
+        <a href="/cars/<%= carDoc._id  %>"
+          ><%= carDoc.make %><%= carDoc.model %></a
+        >
+        
+      </li>
+      <% }) %>
+    </ul>
+  </body>
 </html>
